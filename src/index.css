@@ -1,0 +1,80 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+/* Global styles */
+:root {
+  --primary-color: #7ED957;
+  --main-bg-color: #2A303C;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 1.1rem;
+  font-family: 'Manrope',
+    sans-serif;
+  background-color: var(--main-bg-color);
+  color: whitesmoke;
+}
+
+.container {
+  width: 60%;
+  margin: auto;
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+/* Navbar */
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 0.5rem 0;
+  -webkit-box-shadow: 4px 4px 15px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 15px 5px rgba(10, 10, 10, 0.2);
+}
+
+.navbar .container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .branding img {
+  height: 55px;
+  width: auto;
+  filter: brightness(1.4);
+}
+
+.navbar nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  flex-wrap: wrap;
+}
+
+.navbar nav ul li {
+  padding: 5px 20px;
+  transition: all 500ms;
+}
+
+.navbar nav ul li:hover {
+  font-weight: bold;
+}
