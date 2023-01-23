@@ -1,7 +1,24 @@
 import React from "react";
 import "../index.css";
+import { useState, useEffect } from "react";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const NavbarComponent = () => {
+  const [smallScreen, setSmallScreen] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(false);
+
+  const toggleNavbar = () => {
+    setShowNavbar((prev) => !prev);
+  };
+
+  useEffect(() => {
+    window.innerWidth < 768 ? setSmallScreen(true) : setSmallScreen(false);
+  }, []);
+  window.addEventListener("resize", () => {
+    window.innerWidth < 768 ? setSmallScreen(true) : setSmallScreen(false);
+  });
+
   return (
     <section className="navbar">
       <div className="container">
@@ -12,19 +29,45 @@ const NavbarComponent = () => {
           />
         </div>
 
-        <nav>
-          <ul>
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">About Me</a>
-            </li>
-            <li>
-              <a href="#">Skills</a>
-            </li>
-          </ul>
-        </nav>
+        {smallScreen ? (
+          <div className="smallNavbar">
+            <FontAwesomeIcon
+              className="toggleNavbar"
+              icon={faBars}
+              onClick={toggleNavbar}
+            />
+
+            {showNavbar && (
+              <div onMouseLeave={() => setShowNavbar(false)}>
+                <ul>
+                  <li>
+                    <a href="#">Home</a>
+                  </li>
+                  <li>
+                    <a href="#">About Me</a>
+                  </li>
+                  <li>
+                    <a href="#">Skills</a>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
+        ) : (
+          <nav>
+            <ul>
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">About Me</a>
+              </li>
+              <li>
+                <a href="#">Skills</a>
+              </li>
+            </ul>
+          </nav>
+        )}
       </div>
     </section>
   );
