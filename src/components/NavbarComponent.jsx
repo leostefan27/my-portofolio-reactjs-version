@@ -13,10 +13,10 @@ const NavbarComponent = () => {
   };
 
   useEffect(() => {
-    window.innerWidth < 768 ? setSmallScreen(true) : setSmallScreen(false);
+    window.innerWidth < 900 ? setSmallScreen(true) : setSmallScreen(false);
   }, []);
   window.addEventListener("resize", () => {
-    window.innerWidth < 768 ? setSmallScreen(true) : setSmallScreen(false);
+    window.innerWidth < 900 ? setSmallScreen(true) : setSmallScreen(false);
   });
 
   return (
@@ -49,6 +49,9 @@ const NavbarComponent = () => {
                   <li>
                     <a href="#">Skills</a>
                   </li>
+                  <li>
+                    <a href="#">Contact</a>
+                  </li>
                 </ul>
               </div>
             )}
@@ -64,6 +67,9 @@ const NavbarComponent = () => {
               </li>
               <li>
                 <a href="#">Skills</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
               </li>
             </ul>
           </nav>

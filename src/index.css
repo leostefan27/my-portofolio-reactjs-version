@@ -14,11 +14,13 @@
 }
 
 body {
+  position: relative;
   font-size: 1rem;
   font-family: 'Manrope',
     sans-serif;
   background-color: var(--main-bg-color);
   color: whitesmoke;
+  letter-spacing: 1.5px;
 }
 
 .container {
@@ -39,6 +41,7 @@ ul {
 /* Navbar */
 
 .navbar {
+  background-color: var(--main-bg-color);
   position: fixed;
   z-index: 999;
   width: 100%;
@@ -78,16 +81,18 @@ ul {
 }
 
 .navbar nav ul li {
-  transition: all 300ms;
+  transition: all 500ms;
 }
 
 .navbar nav ul li:hover {
-  font-size: 1.1rem;
+  transform: scale(1.2);
   font-weight: bold;
 }
 
 .navbar .smallNavbar {
+  background-color: var(--main-bg-color);
   position: relative;
+  z-index: 998;
 }
 
 .navbar .smallNavbar .toggleNavbar {
@@ -101,6 +106,7 @@ ul {
 }
 
 .navbar .smallNavbar div {
+  background-color: var(--main-bg-color);
   position: absolute;
   text-transform: uppercase;
   display: flex;
@@ -141,3 +147,134 @@ ul {
 
 
 /* Banner */
+#banner {
+  position: relative;
+  min-height: 100vh;
+}
+
+#banner .container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#banner .firstSection {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#banner .firstSection .text {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+#banner .firstSection .text p {
+  width: 100%;
+  font-size: 2rem;
+  color: rgb(180, 180, 180);
+  font-weight: bolder;
+}
+
+#banner .firstSection .text p:first-child {
+  animation: pulse 10s infinite;
+}
+
+#banner .firstSection .text p:nth-child(3) {
+  animation: pulse 10s infinite;
+  animation-delay: 3s;
+}
+
+#banner .firstSection .words {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  font-size: 6rem;
+  font-weight: bolder;
+  text-shadow: 0px 0px 3px rgba(245, 245, 245, 1);
+}
+
+#banner .firstSection .words .word {
+  display: flex;
+  flex-direction: row;
+  gap: 0.3rem
+}
+
+#banner .firstSection .words .word span {
+  cursor: pointer;
+  transition: all 500ms;
+}
+
+#banner .firstSection .words .word span:hover {
+  text-shadow: -10px 7px 2px rgba(177, 177, 177, 0.6);
+  transform: translateX(10px) translateY(-10px);
+}
+
+#banner .firstSection .contact {
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+
+#banner .firstSection .contact p {
+  font-size: 1.2rem;
+  color: rgb(180, 180, 180);
+  font-weight: bolder;
+  border: 1px solid whitesmoke;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 100px;
+  transition: all 500ms;
+}
+
+#banner .firstSection .contact p:hover {
+  background-color: var(--secondary-bg-color);
+}
+
+#banner .firstSection .contact div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+#banner .firstSection .contact div a {
+  font-size: 2rem;
+  transition: all 500ms;
+}
+
+#banner .firstSection .contact div a:hover {
+  transform: scale(1.10);
+  color: var(--primary-color);
+}
+
+/* Keyframes */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  15% {
+    transform: scale(1.10);
+  }
+
+  30% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+
+}
