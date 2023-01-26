@@ -1,11 +1,36 @@
 /* Imports */
 @import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 /* Global styles */
 :root {
-  --primary-color: #7ED957;
+  /* --primary-color: #7ED957;
   --main-bg-color: #2A303C;
-  --secondary-bg-color: #3e4553;
+  --secondary-color: #3e4553; */
+  --primary-color: #7ED957;
+  --secondary-color: #2c354e;
+  --main-bg-color: #292929;
+  --secondary-bg-color: #37502d;
+}
+
+/* scrollbar width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* scrollbar Track */
+::-webkit-scrollbar-track {
+  background: #888;
+}
+
+/* scrollbar Handle */
+::-webkit-scrollbar-thumb {
+  background: #111;
+}
+
+/* scrollbar Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
 }
 
 * {
@@ -16,7 +41,7 @@
 body {
   position: relative;
   font-size: 1rem;
-  font-family: 'Manrope',
+  font-family: 'Poppins',
     sans-serif;
   background-color: var(--main-bg-color);
   color: whitesmoke;
@@ -43,6 +68,8 @@ ul {
 .navbar {
   background-color: var(--main-bg-color);
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 999;
   width: 100%;
   padding: 0.5rem 0;
@@ -136,24 +163,25 @@ ul {
   padding: 1rem 0.5rem;
   width: 100%;
   border-radius: 10px;
-  transition: all 300ms;
+  transition: all 500ms;
   cursor: pointer;
 }
 
 .navbar .smallNavbar div ul li:hover {
-  background-color: var(--secondary-bg-color);
-  border: 1px solid var(--primary-color);
+  transform: scale(1.05);
+  border: 1px solid whitesmoke;
 }
 
 
 /* Banner */
 #banner {
   position: relative;
-  min-height: 100vh;
+  min-height: 50vh;
+  margin-top: 10rem;
 }
 
 #banner .container {
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -196,7 +224,6 @@ ul {
   gap: 2rem;
   font-size: 6rem;
   font-weight: bolder;
-  text-shadow: 0px 0px 3px rgba(245, 245, 245, 1);
 }
 
 #banner .firstSection .words .word {
@@ -254,8 +281,162 @@ ul {
 }
 
 #banner .firstSection .contact div a:hover {
-  transform: scale(1.10);
-  color: var(--primary-color);
+  transform: scale(0.90);
+}
+
+
+/* Services */
+#services-section {
+  padding: 5rem 0;
+}
+
+.services {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.services .service {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.services .service:nth-child(1) {
+  animation: pulse 13s infinite;
+  animation-delay: 2s;
+}
+
+.services .service:nth-child(2) {
+  animation: pulse 13s infinite;
+  animation-delay: 5s;
+}
+
+.services .service:nth-child(3) {
+  animation: pulse 13s infinite;
+  animation-delay: 8s;
+}
+
+.services .service img {
+  width: 75%;
+}
+
+.services .service p {
+  text-align: center;
+  font-weight: bold;
+}
+
+
+/* About */
+#about-section {
+  padding: 5rem 0;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+}
+
+#about-section .about h1 {
+  font-size: 3.5rem;
+}
+
+#about-section .about h1 span {
+  opacity: 0;
+}
+
+#about-section .about h1 span:nth-child(1) {
+  animation: fade_loop 3s infinite;
+}
+
+#about-section .about h1 span:nth-child(2) {
+  animation: fade_loop 3s infinite;
+  animation-delay: 1s;
+}
+
+#about-section .about h1 span:nth-child(3) {
+  animation: fade_loop 3s infinite;
+  animation-delay: 2s;
+}
+
+#about-section .about-text {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+#about-section .about-text p:nth-child(1) {
+  width: 300%;
+  animation: pulse 10s infinite;
+}
+
+#about-section .about-text p:nth-child(2) {
+  width: 300%;
+  animation: pulse 10s infinite;
+  animation-delay: 4s;
+}
+
+#about-section .about-text p:nth-child(2) a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+#about-section .about-text p:nth-child(2) a span {
+  font-weight: bolder;
+  font-size: 1.1rem;
+}
+
+#about-section .about-text p:nth-child(2) a img {
+  width: 20rem;
+}
+
+#about-section .hobbies {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  padding: 5rem 0;
+}
+
+#about-section .hobbies h2 {
+  font-size: 2.5rem;
+}
+
+#about-section .hobbies .hobby {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+#about-section .hobbies .hobby p {
+  width: 70%;
+}
+
+#about-section .hobbies div:nth-child(2) {
+  animation: pulse 10s infinite;
+}
+
+#about-section .hobbies div:nth-child(3) {
+  animation: pulse 10s infinite;
+  animation-delay: 5s;
+}
+
+#about-section .hobbies .hobby img {
+  width: 15rem;
+  height: auto;
 }
 
 /* Keyframes */
@@ -275,6 +456,22 @@ ul {
   100% {
     transform: scale(1);
   }
+}
 
+@keyframes fade_loop {
+  0% {
+    opacity: 0;
+  }
 
+  30% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
