@@ -346,6 +346,7 @@ ul {
 
 #about-section .about h1 {
   font-size: 3.5rem;
+  text-align: center;
 }
 
 #about-section .about h1 span {
@@ -399,6 +400,8 @@ ul {
 
 #about-section .about-text p:nth-child(2) a img {
   width: 20rem;
+  border-radius: 5px;
+  border: 1px solid black;
 }
 
 #about-section .hobbies {
@@ -412,6 +415,7 @@ ul {
 
 #about-section .hobbies h2 {
   font-size: 2.5rem;
+  text-align: center;
 }
 
 #about-section .hobbies .hobby {
@@ -438,6 +442,66 @@ ul {
   width: 15rem;
   height: auto;
 }
+
+
+/* Skills */
+#skills-section {
+  padding: 5rem 0;
+}
+
+#skills-section .skills {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#skills-section .skills h1 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+#skills-section .skills-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.skill {
+  transition: all 500ms;
+}
+
+.skill:nth-child(2n + 3) {
+  animation: pulse 10s infinite;
+}
+
+.skill:nth-child(2n + 2) {
+  animation: pulse 10s infinite;
+  animation-delay: 4s;
+}
+
+.skill a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.skill img {
+  width: 5rem;
+}
+
+.skill span {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+
 
 /* Keyframes */
 @keyframes pulse {
