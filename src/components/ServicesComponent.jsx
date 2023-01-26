@@ -1,4 +1,6 @@
 import React from "react";
+import { useRef, useState, useEffect } from "react";
+import animateOnScroll from "../utilities/animateOnScroll";
 
 const ServicesComponent = () => {
   return (
@@ -6,17 +8,26 @@ const ServicesComponent = () => {
       <div className="container">
         <div className="services">
           <div className="service">
-            <img src={`${process.env.PUBLIC_URL}/assets/images/web_design_illustration.png`} alt="" />
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/images/web_design_illustration.png`}
+              alt=""
+            />
             <p>WEB DESIGN</p>
           </div>
 
           <div className="service">
-            <img src={`${process.env.PUBLIC_URL}/assets/images/back_end_illustration.png`} alt="" />
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/images/back_end_illustration.png`}
+              alt=""
+            />
             <p>BACK END</p>
           </div>
 
           <div className="service">
-            <img src={`${process.env.PUBLIC_URL}/assets/images/digital_marketing_illustration.png`} alt="" />
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/images/digital_marketing_illustration.png`}
+              alt=""
+            />
             <p>DIGITAL MARKETING</p>
           </div>
         </div>

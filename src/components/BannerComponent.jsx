@@ -1,4 +1,6 @@
 import React from "react";
+import { useRef, useState, useEffect } from "react";
+import animateOnScroll from "../utilities/animateOnScroll";
 import "../index.css";
 import {
   faFacebook,
@@ -29,7 +31,10 @@ const BannerComponent = () => {
             <p>Web Developer from Romania</p>
           </div>
           <div className="contact">
-            <p><a href="#contact-section">Find me here</a></p>
+            <a href="#contact-section">
+              <p>Contact me here</p>
+            </a>
+
             <div>
               <a href="https://www.facebook.com/leo.stefan.iliescu">
                 <FontAwesomeIcon icon={faFacebook} />

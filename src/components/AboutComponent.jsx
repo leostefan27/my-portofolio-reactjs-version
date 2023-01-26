@@ -1,6 +1,9 @@
 import React from "react";
+import { useRef, useState, useEffect } from "react";
+import animateOnScroll from "../utilities/animateOnScroll";
 
 const AboutComponent = () => {
+  
   return (
     <section id="about-section">
       <div className="container">

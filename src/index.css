@@ -7,7 +7,7 @@
   /* --primary-color: #7ED957;
   --main-bg-color: #2A303C;
   --secondary-color: #3e4553; */
-  --primary-color: #7ED957;
+  --primary-color: #096A2E;
   --secondary-color: #2c354e;
   --main-bg-color: #292929;
   --secondary-bg-color: #37502d;
@@ -31,6 +31,11 @@
 /* scrollbar Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #333;
+}
+
+.scrollAnimation {
+  transition: all 500ms;
+  animation: fade 1.25s forwards;
 }
 
 * {
@@ -91,9 +96,9 @@ ul {
 }
 
 .navbar .branding img {
-  height: 55px;
+  height: 65px;
   width: auto;
-  filter: brightness(1.4);
+  filter: brightness(1.25);
 }
 
 .navbar nav ul {
@@ -176,6 +181,9 @@ ul {
   border: 1px solid whitesmoke;
 }
 
+.navbar .smallNavbar div ul li a {
+  width: 100%;
+}
 
 /* Banner */
 #banner {
@@ -557,6 +565,20 @@ ul {
   box-shadow: 4px 4px 15px 5px rgba(10, 10, 10, 0.2);
 }
 
+#contact-section form p.success {
+  font-weight: bold;
+  padding: 1rem;
+  width: 80%;
+  background-color: var(--secondary-bg-color);
+}
+
+#contact-section form p.failed {
+  font-weight: bold;
+  padding: 1rem;
+  width: 80%;
+  background-color: rgb(129, 27, 27);
+}
+
 #contact-section form .form-group {
   display: flex;
   flex-direction: column;
@@ -614,6 +636,63 @@ ul {
 .form-group input[type="submit"]:hover {
   transform: scale(1.05);
 }
+
+
+/* Footer */
+#footer-section {
+  padding-top: 2.5rem;
+  background-color: #202020;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+#footer-section .footer {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#footer-section .footer .data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+#footer-section .footer .data p {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#footer-section .footer .data p span:nth-child(1) {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+#footer-section .footer img {
+  width: 20%;
+}
+
+#footer-section .copyright {
+  width: 100%;
+}
+
+#footer-section .copyright p {
+  text-align: center;
+  padding: 0.5rem 0;
+  background-color: #111;
+  width: 100%;
+}
+
 
 /* Mobile design */
 @media screen and (max-width: 1080px) {
@@ -748,8 +827,19 @@ ul {
   }
 
 
-
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    filter: blur(5px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
   }
 }
