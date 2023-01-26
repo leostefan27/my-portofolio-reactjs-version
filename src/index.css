@@ -443,9 +443,17 @@ ul {
   animation-delay: 5s;
 }
 
-#about-section .hobbies .hobby img {
+#about-section .hobbies .hobby:nth-child(2) img {
   width: 15rem;
   height: auto;
+  animation: rotate 10s infinite;
+}
+
+#about-section .hobbies .hobby:nth-child(3) img {
+  width: 15rem;
+  height: auto;
+  animation: rotate 10s infinite;
+  animation-delay: 5s;
 }
 
 
@@ -508,7 +516,7 @@ ul {
 
 
 /* Mobile design */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1080px) {
 
   .container {
     width: 85%;
@@ -535,6 +543,14 @@ ul {
 
   #about-section .about-text p:nth-child(1) {
     width: 80%;
+  }
+
+  #about-section .about-text p:nth-child(2) {
+    width: 85%;
+  }
+
+  #about-section .about-text p:nth-child(2) a {
+    max-width: 100%;
   }
 
   #about-section .about-text p:nth-child(2) a span {
@@ -577,6 +593,14 @@ ul {
   }
 }
 
+@media screen and (max-width: 550px) {
+  #about-section .about-text p:nth-child(2) a img {
+    width: 25rem;
+    border-radius: 5px;
+    border: 1px solid black;
+  }
+}
+
 /* Keyframes */
 @keyframes pulse {
   0% {
@@ -611,5 +635,21 @@ ul {
 
   100% {
     opacity: 0;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  30% {
+    transform: rotate(360deg);
+  }
+
+
+
+  100% {
+    transform: rotate(360deg);
   }
 }
