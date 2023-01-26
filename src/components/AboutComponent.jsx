@@ -6,7 +6,7 @@ const AboutComponent = () => {
       <div className="container">
         <div className="about">
           <h1>
-            You may wonder who am i<span>.</span>
+            Get to know me better<span>.</span>
             <span>.</span>
             <span>.</span>
           </h1>

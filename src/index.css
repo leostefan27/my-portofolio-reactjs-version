@@ -38,6 +38,10 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth !important;
+}
+
 body {
   position: relative;
   font-size: 1rem;
