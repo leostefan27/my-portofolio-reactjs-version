@@ -44,13 +44,13 @@ const NavbarComponent = () => {
                     <a href="#">Home</a>
                   </li>
                   <li>
-                    <a href="#about">About Me</a>
+                    <a href="#about-section">About Me</a>
                   </li>
                   <li>
-                    <a href="#skills">Skills</a>
+                    <a href="#skills-section">Skills</a>
                   </li>
                   <li>
-                    <a href="#contact">Contact</a>
+                    <a href="#contact-section">Contact</a>
                   </li>
                 </ul>
               </div>

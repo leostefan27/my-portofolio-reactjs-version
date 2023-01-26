@@ -285,7 +285,8 @@ ul {
 }
 
 #banner .firstSection .contact div a:hover {
-  transform: scale(0.90);
+  transform: scale(1.15);
+  color: var(--primary-color);
 }
 
 
@@ -506,6 +507,75 @@ ul {
 }
 
 
+/* Mobile design */
+@media screen and (max-width: 768px) {
+
+  .container {
+    width: 85%;
+  }
+
+  /* Banner */
+  #banner {
+    margin-top: 15rem;
+  }
+
+  #banner .container {
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+
+  /* About */
+  #about-section .about-text {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  #about-section .about-text p:nth-child(1) {
+    width: 80%;
+  }
+
+  #about-section .about-text p:nth-child(2) a span {
+    font-weight: bolder;
+    font-size: 1.4rem;
+  }
+
+  #about-section .about-text p:nth-child(2) a img {
+    width: 30rem;
+    border-radius: 5px;
+    border: 1px solid black;
+  }
+
+  #about-section .hobbies {
+    gap: 5rem;
+    padding-bottom: 0;
+  }
+
+  #about-section .hobbies .hobby {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  #about-section .hobbies .hobby p {
+    width: 80%;
+  }
+
+
+  /* Skills */
+  #skills-section .skills-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+}
 
 /* Keyframes */
 @keyframes pulse {

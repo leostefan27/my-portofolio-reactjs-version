@@ -2,7 +2,7 @@ import React from "react";
 import "../index.css";
 import {
   faFacebook,
-  faInstagram,
+  faLinkedin,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -29,15 +29,15 @@ const BannerComponent = () => {
             <p>Web Developer from Romania</p>
           </div>
           <div className="contact">
-            <p>Find me here</p>
+            <p><a href="#contact-section">Find me here</a></p>
             <div>
-              <a href="">
+              <a href="https://www.facebook.com/leo.stefan.iliescu">
                 <FontAwesomeIcon icon={faFacebook} />
               </a>
-              <a href="">
-                <FontAwesomeIcon icon={faInstagram} />
+              <a href="https://www.linkedin.com/in/iliescu-stefan-leonard-95b935208/">
+                <FontAwesomeIcon icon={faLinkedin} />
               </a>
-              <a href="">
+              <a href="https://github.com/leostefan27">
                 <FontAwesomeIcon icon={faGithub} />
               </a>
             </div>
