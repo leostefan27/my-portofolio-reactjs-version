@@ -2,6 +2,7 @@ import React from "react";
 import NavbarComponent from "./components//NavbarComponent";
 import AboutComponent from "./components/AboutComponent";
 import BannerComponent from "./components/BannerComponent";
+import ContactComponent from "./components/ContactComponent";
 import ServicesComponent from "./components/ServicesComponent";
 import SkillsComponent from "./components/SkillsComponent";
 
@@ -13,6 +14,7 @@ const App = () => {
       <ServicesComponent />
       <AboutComponent />
       <SkillsComponent />
+      <ContactComponent />
     </>
   );
 };

@@ -515,6 +515,106 @@ ul {
 }
 
 
+/* Contact */
+#contact-section {
+  padding: 6rem 0;
+}
+
+#contact-section .contact {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+#contact-section .contact p {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#contact-section .contact p span:nth-child(1) {
+  animation: pulse 10s infinite;
+  animation-delay: 5s;
+}
+
+#contact-section .contact p span:nth-child(2) {
+  font-size: 2rem;
+  font-weight: bolder;
+  animation: pulse 10s infinite;
+}
+
+#contact-section form {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-shadow: 4px 4px 15px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 15px 5px rgba(10, 10, 10, 0.2);
+}
+
+#contact-section form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.form-group input {
+  width: 80%;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: rgb(126, 126, 126);
+  transition: all 500ms;
+}
+
+.form-group input:focus {
+  background-color: whitesmoke;
+  transform: scale(1.05);
+}
+
+.form-group textarea {
+  width: 80%;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: rgb(126, 126, 126);
+  min-height: 10rem;
+  transition: all 500ms;
+}
+
+.form-group textarea:focus {
+  background-color: whitesmoke;
+  transform: scale(1.05);
+}
+
+.form-group input[type="submit"] {
+  width: 80%;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: var(--secondary-bg-color);
+  color: white;
+  cursor: pointer;
+  transition: all 500ms;
+  -webkit-box-shadow: 4px 4px 15px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 15px 5px rgba(10, 10, 10, 0.2);
+}
+
+.form-group input[type="submit"]:hover {
+  transform: scale(1.05);
+}
+
 /* Mobile design */
 @media screen and (max-width: 1080px) {
 
