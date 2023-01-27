@@ -40,18 +40,21 @@ const NavbarComponent = () => {
             {showNavbar && (
               <div onMouseLeave={() => setShowNavbar(false)}>
                 <ul>
-                  <li>
-                    <a href="#">Home</a>
-                  </li>
-                  <li>
-                    <a href="#about-section">About Me</a>
-                  </li>
-                  <li>
-                    <a href="#skills-section">Skills</a>
-                  </li>
-                  <li>
-                    <a href="#contact-section">Contact</a>
-                  </li>
+                  <a href="#">
+                    <li>Home</li>
+                  </a>
+
+                  <a href="#about-section">
+                    <li>About Me</li>
+                  </a>
+
+                  <a href="#skills-section">
+                    <li>Skills</li>
+                  </a>
+
+                  <a href="#contact-section">
+                    <li>Contact</li>
+                  </a>
                 </ul>
               </div>
             )}
