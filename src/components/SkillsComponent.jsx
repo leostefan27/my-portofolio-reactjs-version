@@ -14,7 +14,7 @@ const SkillsComponent = () => {
             <SkillComponent image="typescript_icon.png" name="Typescript" link="https://www.typescriptlang.org/"/>
             <SkillComponent image="reactjs_icon.png" name="React" link="https://reactjs.org/"/>
             <SkillComponent image="nodejs_icon.png" name="Node.js" link="https://nodejs.org/en/"/>
-            <SkillComponent image="mongodb_icon.png" name="MonogoDB" link="https://www.mongodb.com/"/>
+            <SkillComponent image="mongodb_icon.png" name="MongoDB" link="https://www.mongodb.com/"/>
             <SkillComponent image="tailwindcss_icon.png" name="Tailwind CSS" link="https://tailwindcss.com/"/>
             <SkillComponent image="bootstrap_icon.png" name="Bootstrap" link="https://getbootstrap.com/"/>
             <SkillComponent image="git_icon.png" name="Git" link="https://git-scm.com/"/>

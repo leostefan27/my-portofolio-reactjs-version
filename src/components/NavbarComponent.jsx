@@ -1,7 +1,7 @@
 import React from "react";
 import "../index.css";
 import { useState, useEffect } from "react";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faShoePrints } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const NavbarComponent = () => {
@@ -9,7 +9,13 @@ const NavbarComponent = () => {
   const [showNavbar, setShowNavbar] = useState(false);
 
   const toggleNavbar = () => {
-    setShowNavbar((prev) => !prev);
+    if (showNavbar === true) {
+      setShowNavbar(false);
+    }
+
+    if (showNavbar === false) {
+      setShowNavbar(true);
+    }
   };
 
   useEffect(() => {
