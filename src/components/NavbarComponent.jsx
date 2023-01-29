@@ -1,7 +1,7 @@
 import React from "react";
 import "../index.css";
 import { useState, useEffect } from "react";
-import { faBars, faShoePrints } from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const NavbarComponent = () => {
