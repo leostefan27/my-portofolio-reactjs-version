@@ -54,10 +54,10 @@ const ContactComponent = () => {
 
     emailjs
       .send(
-        "service_7mig8u2",
-        "template_jkkeg3q",
+        "",
+        "",
         templateParams,
-        "B9nlgZwF8oCx0IyId"
+        ""
       )
       .then(
         function (response) {
